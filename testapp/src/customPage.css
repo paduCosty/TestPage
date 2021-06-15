@@ -1,0 +1,62 @@
+#pageBorder {
+    background-color: black;
+    border: solid 2px gray;
+    width: 900px;
+    height: 900px;
+    
+}
+
+.inputTitleList {
+    background-color: initial;
+    color: white;
+    width: 600px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+}
+
+.listElement{
+    width: 600px;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    color: #ccc;
+    border-radius: 4px;
+    background-color: initial;
+    font-size: 16px;
+    resize: none;
+    line-height: 1;
+    margin-bottom: 15px;
+}
+.createList {
+    background-color: gray;
+    border: solid 2px green;
+    width: 600px;
+    height: 200px;
+    text-indent: -370px;
+}
+.newList {
+    margin-bottom: 20px;
+}
+.submitButton {
+    background-color: initial;
+    color: white;
+}
+.test {
+    color: red;
+}
+.titleListBox {
+    border: solid 2px gray;
+    width: 600px;
+    height: 200px;
+    color: red;
+}
+.addNewList {
+    text-align: ;
+    text-indent: 500px;
+}
