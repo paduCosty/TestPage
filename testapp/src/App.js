@@ -61,7 +61,7 @@ function App() {
         <div className='listDiv'>{arrList[j]}</div>
         <div className='listDiv' >{arrAbout[j]}</div>
         <br />
-        <button onClick={() => editText(j)}>Edit</button> {/* Butonul de edit */}
+        <button onClick={() => editText(j)}>Edit</button>
         <button onClick={() => deleteList(j)}>Delete </button>
         <button onClick={() => closePage()}> Close</button>
         </div>
@@ -73,7 +73,7 @@ function App() {
           <input className='editTitleList' onChange={setTitle} defaultValue={arrTitle[j]} placeholder="List title..." />
           <textarea typeof="list" className='editList' onChange={setValueList} defaultValue={arrList[j]} placeholder="Insert your list..." />
           <textarea typeof="list" className='editList' onChange={onSetAboutList} defaultValue={arrAbout[j]} placeholder="Description list..." />
-          <button onClick={() => saveList(j)}>Salve</button> {/* Salve button of edit */}
+          <button onClick={() => saveList(j)}>Salve</button>
           <button onClick={() => closePage()}>Close</button>
           </div>
           );
@@ -107,7 +107,7 @@ function App() {
             index = 0;
           }
           
-          localStorage.setItem('maxListKey', index); // Allays when you remove all elements at localStorage need too initialize maxListKey with 0 value
+          localStorage.setItem('maxListKey', index);
           //console.log(localStorage.getItem('deleteList'));
           //localStorage.clear();
           return (
@@ -133,5 +133,3 @@ function App() {
      );
   }
 export default App;
-// trebuie sa vad de ce nu merge sa editez doar valorile listei. Merge sa editez cand editez si titlul.
-// si trebuie sa mai testez aplicatia
