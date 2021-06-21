@@ -1,15 +1,15 @@
 #pageBorder {
+    border: solid;
     background-color: black;
-    border: solid 2px gray;
-    width: 900px;
-    height: 900px;
-    
+    width: 1200px;
+    height: 1400px;  
+    margin-top: 2%;
 }
 
 .inputTitleList {
     background-color: initial;
     color: white;
-    width: 600px;
+    width: 900px;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
@@ -20,7 +20,7 @@
 }
 
 .listElement{
-    width: 600px;
+    width: 900px;
     height: 150px;
     padding: 12px 20px;
     box-sizing: border-box;
@@ -43,20 +43,106 @@
 .newList {
     margin-bottom: 20px;
 }
-.submitButton {
-    background-color: initial;
-    color: white;
-}
-.test {
-    color: red;
+button{
+    background-color: rgb(62, 13, 102);
+    color: rgb(167, 74, 74);
+    height: 30px;
+    width: 140px;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 .titleListBox {
     border: solid 2px gray;
-    width: 600px;
-    height: 200px;
+    width: 900px;
+    height: auto;
     color: red;
+    
 }
 .addNewList {
-    text-align: ;
-    text-indent: 500px;
+    position: relative;
+    left: 40%;
+    margin-top: 7%;
+    margin-bottom: 3%;
+  
+}
+.listsPart {
+    text-align: justify;
+    color: white;
+} 
+.menuList {
+    display: block;
+    background-color: rgb(68, 63, 63);
+    text-align: left;
+    width: 800px;
+    height: auto;
+    width: 30;
+    margin-top: 12%;
+}
+h2 {
+    text-align: center;
+}
+.listDiv {
+    width: 900px;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid gray;
+    color: #ccc;
+    border-radius: 4px;
+    background-color:rgb(73, 5, 26);
+    font-size: 16px;
+    resize: none;
+    line-height: 1;
+    margin-bottom: 15px;
+    text-align: left;
+    margin-top: 1%;
+}
+.titleListDiv {
+    width: 900px;
+    height: 50px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid gray;
+    color: #ccc;
+    border-radius: 4px;
+    background-color: rgb(73, 5, 26);
+    font-size: 16px;
+    resize: none;
+    line-height: 1;
+    margin-bottom: 15px;
+    text-align: left;
+    margin-top: 1%;
+}
+.editTitleList {
+    width: 900px;
+    height: 50px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid gray;
+    color: #ccc;
+    border-radius: 4px;
+    background-color: rgb(54, 45, 102);
+    font-size: 16px;
+    resize: none;
+    line-height: 1;
+    margin-bottom: 15px;
+    text-align: left;
+    margin-top: 1%;
+
+}
+.editList {
+    width: 900px;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid gray;
+    color: #ccc;
+    border-radius: 4px;
+    background-color: rgb(54, 45, 102);
+    font-size: 16px;
+    resize: none;
+    line-height: 1;
+    margin-bottom: 15px;
+    text-align: left;
+
 }
