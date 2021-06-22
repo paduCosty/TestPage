@@ -29,11 +29,33 @@ function App() {
     index++;
   }
   const deleteList = (j) => {
-    ++forDelete;///
     localStorage.removeItem(j);
-    localStorage.removeItem(j + 10);
-    localStorage.removeItem(j + 20);
+    localStorage.removeItem(j + 100);
+    localStorage.removeItem(j + 200);
     changeText('');
+    index = sizeCalibration(index);
+  }
+
+  function sizeCalibration(index) {
+    let maxSize = 0;
+    for(let i = 0, j = 0; i <= index; ++i) {
+      if(localStorage.getItem(i) !== null) {
+        ++j;
+      }
+      let cal = localStorage.getItem(i);
+      let cal2 = localStorage.getItem(i + 100);
+      let cal3 = localStorage.getItem(i + 200);
+      if(cal !== null) {
+        localStorage.setItem(j, cal);
+        localStorage.setItem(j + 100, cal2);
+        localStorage.setItem(j + 200, cal3);
+      }
+      maxSize = j;
+    }
+    localStorage.removeItem(maxSize + 1);
+    localStorage.removeItem(maxSize + 101);
+    localStorage.removeItem(maxSize + 201);
+    return maxSize;
   }
   const closePage = () => {
     changeText('');
@@ -53,9 +75,9 @@ function App() {
     const showList = (j) => {
       changeText(
         <div>
-        <div className='titleListDiv'>{arrTitle[j]}</div>
-        <div className='listDiv'>{arrList[j]}</div>
-        <div className='listDiv' >{arrAbout[j]}</div>
+        <h1 className='titleListDiv'>{arrTitle[j]}</h1>
+        <li className='listDiv'>{arrList[j]}</li>
+        <li className='listDiv'>{arrAbout[j]} </li>
         <br />
         <button onClick={() => editText(j)}>Edit</button>
         <button onClick={() => deleteList(j)}>Delete </button>
@@ -83,8 +105,8 @@ function App() {
         }
         if(stopp === false ) {
           localStorage.setItem(index, value);
-          localStorage.setItem(index + 10, list);
-          localStorage.setItem(index + 20, aboutList);
+          localStorage.setItem(index + 100, list);
+          localStorage.setItem(index + 200, aboutList);
           stopp = true;
         }
         //
@@ -95,10 +117,10 @@ function App() {
             localStorage.setItem(saveEdit, value);
           } 
           if(list !== '') {
-            localStorage.setItem(saveEdit + 10, list);
+            localStorage.setItem(saveEdit + 100, list);
           } 
           if(aboutList !== '') {
-            localStorage.setItem(saveEdit + 20, aboutList);
+            localStorage.setItem(saveEdit + 200, aboutList);
           }
           setValue('');
           setList('');
@@ -107,16 +129,15 @@ function App() {
         }
 
         //
-          for(let i = 0; i < 10; ++i) {
+          for(let i = 0; i < 100; ++i) {
             arrTitle[i] = localStorage.getItem(i);
-            arrList[i] = localStorage.getItem(i + 10);
-            arrAbout[i] = localStorage.getItem(i + 20); 
-          //  console.log(localStorage.getItem(i));
+            arrList[i] = localStorage.getItem(i + 100);
+            arrAbout[i] = localStorage.getItem(i + 200); 
+            console.log(localStorage.getItem(i));
           }
         
           
           localStorage.setItem('maxListKey', index);
-          //console.log(localStorage.getItem('deleteList'));
           //localStorage.clear();
           return (
             <center>
