@@ -3,7 +3,7 @@ import React from 'react';
 import './customPage.css'
 
 let saveEdit = 0, setEdit = true;
-let index = 0, forDelete = 0;
+let index = 0;
 //localStorage.setItem('maxListKey', 0);
 index = localStorage.getItem('maxListKey');
 let stopp = true;
@@ -98,7 +98,6 @@ function App() {
         }
         const saveList = (j) => {
           saveEdit = j;
-          //console.log(j);
           setEdit = false
           changeText(''); 
           
