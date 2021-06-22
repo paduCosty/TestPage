@@ -4,6 +4,7 @@ import './customPage.css'
 
 let saveEdit = 0, setEdit = true;
 let index = 0, forDelete = 0;
+//localStorage.setItem('maxListKey', 0);
 index = localStorage.getItem('maxListKey');
 let stopp = true;
 
@@ -28,10 +29,10 @@ function App() {
     index++;
   }
   const deleteList = (j) => {
-    ++forDelete;
+    ++forDelete;///
     localStorage.removeItem(j);
-    localStorage.removeItem(j + 100);
-    localStorage.removeItem(j + 200);
+    localStorage.removeItem(j + 10);
+    localStorage.removeItem(j + 20);
     changeText('');
   }
   const closePage = () => {
@@ -82,21 +83,35 @@ function App() {
         }
         if(stopp === false ) {
           localStorage.setItem(index, value);
-          localStorage.setItem(index + 100, list);
-          localStorage.setItem(index + 200, aboutList);
+          localStorage.setItem(index + 10, list);
+          localStorage.setItem(index + 20, aboutList);
           stopp = true;
         }
-        //if(setEdit === false && value !== '') {
-          // localStorage.setItem(saveEdit, value);
-          //   localStorage.setItem(saveEdit + 100, list);
-          //   localStorage.setItem(saveEdit + 200, aboutList);
-          // setEdit = true;
-          //  / }
-          for(let i = 0; i < 100; ++i) {
+        //
+
+        if(setEdit === false) {
+          console.log(setEdit);
+          if( value !== '') {
+            localStorage.setItem(saveEdit, value);
+          } 
+          if(list !== '') {
+            localStorage.setItem(saveEdit + 10, list);
+          } 
+          if(aboutList !== '') {
+            localStorage.setItem(saveEdit + 20, aboutList);
+          }
+          setValue('');
+          setList('');
+          setAboutList('');
+          setEdit = true;
+        }
+
+        //
+          for(let i = 0; i < 10; ++i) {
             arrTitle[i] = localStorage.getItem(i);
-            arrList[i] = localStorage.getItem(i + 100);
-            arrAbout[i] = localStorage.getItem(i + 200); 
-            // console.log(localStorage.getItem(i));
+            arrList[i] = localStorage.getItem(i + 10);
+            arrAbout[i] = localStorage.getItem(i + 20); 
+          //  console.log(localStorage.getItem(i));
           }
         
           
