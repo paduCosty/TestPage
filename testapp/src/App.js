@@ -32,11 +32,6 @@ function App() {
     localStorage.removeItem(j);
     localStorage.removeItem(j + 100);
     localStorage.removeItem(j + 200);
-    let indexDelete = 0;
-    indexDelete = localStorage.getItem('deleteList');
-    localStorage.setItem('deleteList', forDelete);
-    console.log(indexDelete + forDelete);
-    console.log(forDelete);
     changeText('');
   }
   const closePage = () => {
@@ -103,9 +98,7 @@ function App() {
             arrAbout[i] = localStorage.getItem(i + 200); 
             // console.log(localStorage.getItem(i));
           }
-          if(localStorage.getItem('deleteList') === index) {
-            index = 0;
-          }
+        
           
           localStorage.setItem('maxListKey', index);
           //console.log(localStorage.getItem('deleteList'));

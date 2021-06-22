@@ -33,17 +33,12 @@
     line-height: 1;
     margin-bottom: 15px;
 }
-.createList {
-    background-color: gray;
-    border: solid 2px green;
-    width: 600px;
-    height: 200px;
-    text-indent: -370px;
-}
+
 .newList {
     margin-bottom: 20px;
 }
-button{
+
+button {
     background-color: rgb(62, 13, 102);
     color: rgb(167, 74, 74);
     height: 30px;
@@ -51,13 +46,14 @@ button{
     margin-left: 10%;
     margin-right: 10%;
 }
+
 .titleListBox {
     border: solid 2px gray;
     width: 900px;
     height: auto;
-    color: red;
-    
+    color: red; 
 }
+
 .addNewList {
     position: relative;
     left: 40%;
@@ -65,10 +61,12 @@ button{
     margin-bottom: 3%;
   
 }
+
 .listsPart {
     text-align: justify;
     color: white;
 } 
+
 .menuList {
     display: block;
     background-color: rgb(68, 63, 63);
@@ -78,9 +76,11 @@ button{
     width: 30;
     margin-top: 12%;
 }
+
 h2 {
     text-align: center;
 }
+
 .listDiv {
     width: 900px;
     height: 150px;
@@ -97,6 +97,7 @@ h2 {
     text-align: left;
     margin-top: 1%;
 }
+
 .titleListDiv {
     width: 900px;
     height: 50px;
@@ -113,6 +114,7 @@ h2 {
     text-align: left;
     margin-top: 1%;
 }
+
 .editTitleList {
     width: 900px;
     height: 50px;
@@ -130,6 +132,7 @@ h2 {
     margin-top: 1%;
 
 }
+
 .editList {
     width: 900px;
     height: 150px;
@@ -144,5 +147,4 @@ h2 {
     line-height: 1;
     margin-bottom: 15px;
     text-align: left;
-
 }
