@@ -108,7 +108,6 @@ function App() {
           localStorage.setItem(index + 200, aboutList);
           stopp = true;
         }
-        //
 
         if(setEdit === false) {
           console.log(setEdit);
@@ -126,8 +125,6 @@ function App() {
           setAboutList('');
           setEdit = true;
         }
-
-        //
           for(let i = 0; i < 100; ++i) {
             arrTitle[i] = localStorage.getItem(i);
             arrList[i] = localStorage.getItem(i + 100);
